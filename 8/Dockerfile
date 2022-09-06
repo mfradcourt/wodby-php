@@ -195,12 +195,12 @@ RUN set -xe; \
         # Using pear as pecl throw errors: https://blog.flowl.info/2015/peclpear-behind-proxy-how-to/
         pear config-set http_proxy "${PECL_HTTP_PROXY}"; \
     fi; \
-    \
+    \    
     # Microsoft ODBC driver for SQL Server
-    curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk && \
-    apk add --allow-untrusted msodbcsql17_17.6.1.1-1_amd64.apk; \
-    curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.6.1.1-1_amd64.apk && \
-    apk add --allow-untrusted mssql-tools_17.6.1.1-1_amd64.apk; \
+    curl -O https://download.microsoft.com/download/8/6/8/868e5fc4-7bfe-494d-8f9d-115cbcdb52ae/msodbcsql18_18.1.1.1-1_amd64.apk && \
+    apk add --allow-untrusted msodbcsql18_18.1.1.1-1_amd64.apk; \
+    curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_18_18.1.1.1-1_amd64.apk && \
+    apk add --allow-untrusted mssql-tools_18_18.1.1.1-1_amd64.apk; \
     rm ./*.apk; \
     \
     pecl install \
